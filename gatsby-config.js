@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "/Hundred-Days-Of-Code-Log/",
   plugins: [
     `gatsby-transformer-remark`,
     {
@@ -14,8 +15,6 @@ module.exports = {
         name: `markdown-pages`,
         path: `${__dirname}/src/markdown-pages`,
       },
-      pathPrefix: "/Hundred-Days-Of-Code-Log/",
-
     },
   ],
 }
