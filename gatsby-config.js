@@ -1,20 +1,24 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+
 
 module.exports = {
-  /* Your site config here */
-  pathPrefix: "/Hundred-Days-Of-Code-Log",
-  plugins: [
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
-      },
+  siteMetadata: {
+    title: `Gatsby Markdown Blog`,
+    description: `Learn how to make a blog with Gatsby and Markdown posts.`,
     },
-  ],
+    pathPrefix: "/Hundred-Days-Of-Code-Log",
+    plugins: [
+      {
+          resolve: `gatsby-plugin-mdx`,
+          options: {
+              extensions: [`.mdx`, `.md`],
+          },
+      },
+      {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+              name: `posts`,
+              path: `${__dirname}/src/posts`,
+          },
+      },
+    ],
 }
