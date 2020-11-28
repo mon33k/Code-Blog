@@ -2,8 +2,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Markdown Blog`,
-    description: `Learn how to make a blog with Gatsby and Markdown posts.`,
+    title: `100 Days Of Code - First Round`,
+    description: `I created this blog using Gatsby and Markdown posts`,
     },
     pathPrefix: "/Hundred-Days-Of-Code-Log",
     plugins: [

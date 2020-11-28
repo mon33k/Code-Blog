@@ -1,5 +1,9 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import "../stylesheets/HomePage.css"
+import NavBar from '../components/navbar'
+
+
 
 export const query = graphql
 `
@@ -28,20 +32,24 @@ export const query = graphql
 
 const HomePage = ({ data }) => {
     return (
-        <div>
+        <div className="app-container">
             <div>
                 <h1>{data.site.siteMetadata.title}</h1>
                 <p>{data.site.siteMetadata.description}</p>
             </div>
 
-            <div>
-                {data.allMdx.nodes.map(({ excerpt, frontmatter }) => (
-                    <>
-                        <h1>{frontmatter.title}</h1>
-                        <p>{frontmatter.date}</p>
-                        <p>{excerpt}</p>
-                    </>
-                ))}
+          <div className="main-container">
+                <NavBar/>
+                
+                <div className="frontmatter-container">
+                      {data.allMdx.nodes.map(({ excerpt, frontmatter, id }) => (
+                          <div key={id} className="item">
+                              <h1>{frontmatter.title}</h1>
+                              <p>{frontmatter.date}</p>
+                              <p className="excerpt">{excerpt}</p>
+                          </div>
+                      ))}
+                </div>
             </div>
         </div>
     )
