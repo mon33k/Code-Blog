@@ -14,10 +14,10 @@ const styles = theme => ({
         display: 'flex',
     },
     appBar: {
-        transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-        }),
+        // transition: theme.transitions.create(['margin', 'width'], {
+        // easing: theme.transitions.easing.sharp,
+        // duration: theme.transitions.duration.leavingScreen,
+        // }),
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,

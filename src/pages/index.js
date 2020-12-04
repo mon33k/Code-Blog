@@ -1,7 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import "../stylesheets/HomePage.css"
-import NavBar from "../components/navbar"
+// import NavBar from "../components/navbar"
+import MenuDrawer from "../components/MenuDrawer"
 
 export const query = graphql`
     query SITE_INDEX_QUERY {
@@ -30,6 +31,7 @@ export const query = graphql`
 const HomePage = ({ data }) => {
     
 return (
+
     <div className="app-container">
         {/* <div className="header-container">
             <h1 className="site-title">{data.site.siteMetadata.title}</h1>
@@ -37,8 +39,7 @@ return (
         </div> */}
 
         <div className="main-container">
-            <NavBar />
-
+            <MenuDrawer />
             <div className="frontmatter-container">
                 {data.allMdx.nodes.map(({ excerpt, frontmatter, id }) => (
                 <div key={id} className="item">
