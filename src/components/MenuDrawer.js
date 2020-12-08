@@ -54,10 +54,11 @@ class MenuDrawer extends Component {
     }
 
     render() {
-        // const { classes, location: { pathname }, children, writers } = this.props
-        const { classes, children } = this.props
-        console.log("classes", classes)
-        console.log("children", children)
+        const { classes, children, postLinks } = this.props
+        // console.log("classes", classes)
+        // console.log("children", children)
+        // console.log("postLinks", postLinks)
+        
         const { mobileOpen } = this.state
 
         const drawer = (
@@ -69,23 +70,23 @@ class MenuDrawer extends Component {
             <MenuItem component={Link} to="/bunnies">
                 Home
             </MenuItem>
-            <MenuItem  to="/writers" >
-                Writers
+            <MenuItem  to="/posts" >
+                Posts
             </MenuItem>
             <MenuList>
-                {/* {writers.map(({ id, name }) => {
-                const to = `/writers/${id}`
+                {postLinks.map(({ excerpt, frontmatter, id  }) => {
+                const to = `/posts/${id}`
 
                 return <MenuItem
-                    to={to}
+                    // to={to}
                     key={id}
                     className={classes.nested}
-                    component={Link}
-                    selected={to === pathname}
+                    // component={Link}
+                    // selected={to === pathname}
                 >
-                    {name}
+                    <Link to={to}>{frontmatter.title}</Link>
                 </MenuItem>
-                })} */}
+                })}
             </MenuList>
             </MenuList>
         </div>
@@ -144,5 +145,6 @@ class MenuDrawer extends Component {
         </Fragment>
         }
     }
+
 
     export default compose(withStyles(styles))(MenuDrawer)
