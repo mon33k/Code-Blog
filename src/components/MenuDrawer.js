@@ -67,24 +67,25 @@ class MenuDrawer extends Component {
             <div className={classes.toolbar} />
             </Hidden>
             <MenuList>
-            <MenuItem component={Link} to="/bunnies">
+            <MenuItem component={Link} to="/">
                 Home
+            </MenuItem>
+            <MenuItem component={Link} to="/about" >
+                About
             </MenuItem>
             <MenuItem  to="/posts" >
                 Posts
             </MenuItem>
             <MenuList>
-                {postLinks.map(({ excerpt, frontmatter, id  }) => {
-                const to = `/posts/${id}`
+                {postLinks.map(({ excerpt, frontmatter, id, fields  }) => {
 
                 return <MenuItem
-                    // to={to}
+                    to={fields.slug}
                     key={id}
                     className={classes.nested}
-                    // component={Link}
-                    // selected={to === pathname}
+                    component={Link}
                 >
-                    <Link to={to}>{frontmatter.title}</Link>
+                    {frontmatter.title}
                 </MenuItem>
                 })}
             </MenuList>
@@ -107,7 +108,7 @@ class MenuDrawer extends Component {
                 <Menu />
                 </IconButton>
                 <Typography variant="h6" color="inherit" noWrap>
-                Writers Blog
+                    100 Days Of Code Blog
                 </Typography>
             </Toolbar>
             </AppBar>

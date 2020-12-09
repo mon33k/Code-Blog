@@ -1,9 +1,8 @@
 import React, {Fragment} from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import "../stylesheets/HomePage.css"
 // import NavBar from "../components/navbar"
 import MenuDrawer from "../components/MenuDrawer"
-import Link from 'gatsby'
 import Post from '../components/Post'
 
 export const query = graphql`
@@ -25,6 +24,9 @@ export const query = graphql`
             title
             date
             }
+            fields {
+                slug
+            }
         }
     }
 }
@@ -38,7 +40,6 @@ return (
             <Post posts={data.allMdx.nodes}/>
         </MenuDrawer>
     </Fragment>
-
     )
 }
 
