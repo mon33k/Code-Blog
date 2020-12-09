@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/bunnies.js"],"names":["Bunnies"],"mappings":"6FAAA,gCAQeA,UANC,WACZ,OACI","file":"component---src-pages-bunnies-js-66938de91e1c70873702.js","sourcesContent":["import React from 'react'\n\nconst Bunnies = () => {\n    return (\n        <div>Poop</div>\n    )\n}\n\nexport default Bunnies"],"sourceRoot":""}
