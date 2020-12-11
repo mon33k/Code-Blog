@@ -1,8 +1,8 @@
 import React, {Fragment} from "react"
 import { graphql, Link } from "gatsby"
 import "../stylesheets/HomePage.css"
-// import NavBar from "../components/navbar"
-import MenuDrawer from "../components/MenuDrawer"
+// import MenuDrawer from "../components/MenuDrawer"
+import Layout from "../layouts/index"
 import Post from '../components/Post'
 
 export const query = graphql`
@@ -36,9 +36,9 @@ const HomePage = ({ data }) => {
 
 return (
     <Fragment>
-        <MenuDrawer postLinks={data.allMdx.nodes}>
+        <Layout postLinks={data.allMdx.nodes}>
             <Post posts={data.allMdx.nodes}/>
-        </MenuDrawer>
+        </Layout>
     </Fragment>
     )
 }
