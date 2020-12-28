@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import "../stylesheets/HomePage.css"
 // import MenuDrawer from "../components/MenuDrawer"
 import Layout from "../layouts/index"
-import Post from '../components/Post'
+// import Post from '../components/Post'
 
 export const query = graphql`
     query SITE_INDEX_QUERY {
@@ -32,30 +32,27 @@ export const query = graphql`
 }
 `
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, location }) => {
 
 return (
     <Fragment>
-        <Layout postLinks={data.allMdx.nodes}>
-            <Post posts={data.allMdx.nodes}/>
+        <Layout postLinks={data.allMdx.nodes} location={location}>
+            {data.allMdx.nodes.map(({ excerpt, frontmatter, id, fields }) => (
+                            <div key={id} className="item">
+                                <Link
+                                    to={fields.slug}
+                                >
+                                    <h1>{frontmatter.title}</h1>
+                                </Link>
+                               
+                                <p>{frontmatter["date"].substring(0, 10)}</p>
+                                <p className="excerpt">{excerpt}</p>
+                                <div>POST COMPONENT</div>
+                            </div>
+                    ))}
         </Layout>
     </Fragment>
     )
 }
 
 export default HomePage
-
-  // <div className="app-container">
-        // {/* <div className="header-container">
-        //     <h1 className="site-title">{data.site.siteMetadata.title}</h1>
-        //     <p className="site-description">{data.site.siteMetadata.description}</p>
-        // </div> */}
-
-        // <div className="main-container">
-        // <>
-        //     <MenuDrawer postLinks={data.allMdx.nodes}>
-        //         <Post posts={data.allMdx.nodes}/>
-        //     </MenuDrawer>
-        // </>
-        // </div>
-    // </div>

@@ -13,6 +13,7 @@ class Post extends React.Component {
                                 <h1>{frontmatter.title}</h1>
                                 <p>{frontmatter["date"].substring(0, 10)}</p>
                                 <p className="excerpt">{excerpt}</p>
+                                <div>POST COMPONENT</div>
                             </div>
                     ))}
             </>

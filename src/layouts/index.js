@@ -3,10 +3,11 @@ import {
     AppBar, Toolbar, IconButton, Typography, Hidden,
     Drawer, CssBaseline, MenuList, MenuItem
 } from '@material-ui/core'
+import SubMenu from '../components/submenu'
 import { withStyles } from '@material-ui/core/styles'
 import { Menu } from '@material-ui/icons'
 import { compose } from 'recompose'
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const drawerWidth = 240
 
@@ -54,12 +55,11 @@ class Layout extends Component {
     }
 
     render() {
-        const { classes, children, postLinks } = this.props
-        // console.log("classes", classes)
-        // console.log("children", children)
-        // console.log("postLinks", postLinks)
+        const { classes, children, location } = this.props
         
         const { mobileOpen } = this.state
+
+        // console.log("data in layout compoent ", data)
 
         const drawer = (
         <div>
@@ -73,23 +73,13 @@ class Layout extends Component {
             <MenuItem component={Link} to="/about" >
                 About
             </MenuItem>
-            <MenuItem  to="/posts" >
+            <MenuItem to="/posts" >
                 Posts
             </MenuItem>
-            <MenuList>
-                {/* {postLinks.map(({ excerpt, frontmatter, id, fields  }) => {
 
-                return <MenuItem
-                    to={fields.slug}
-                    key={id}
-                    className={classes.nested}
-                    component={Link}
-                >
-                    {frontmatter.title}
-                </MenuItem>
-                })} */}
-            </MenuList>
-            </MenuList>
+                <SubMenu nested={classes.nested}/>
+                
+            </MenuList> 
         </div>
         )
 
@@ -145,6 +135,8 @@ class Layout extends Component {
         </div>
         </Fragment>
         }
+
+        
     }
 
 
