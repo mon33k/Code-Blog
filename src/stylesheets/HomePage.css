@@ -35,3 +35,7 @@
     display: flex;
     flex-wrap: wrap
 }
+
+.post-date {
+    color: #C9ADA7;
+}

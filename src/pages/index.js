@@ -4,6 +4,8 @@ import "../stylesheets/HomePage.css"
 // import MenuDrawer from "../components/MenuDrawer"
 import Layout from "../layouts/index"
 // import Post from '../components/Post'
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+
 
 export const query = graphql`
     query SITE_INDEX_QUERY {
@@ -27,27 +29,27 @@ export const query = graphql`
             fields {
                 slug
             }
+            body
         }
     }
 }
 `
 
-const HomePage = ({ data, location }) => {
+const HomePage = ({ data, location, children }) => {
+    console.log("children ", data)
 
 return (
     <Fragment>
-        <Layout postLinks={data.allMdx.nodes} location={location}>
-            {data.allMdx.nodes.map(({ excerpt, frontmatter, id, fields }) => (
+        <Layout location={location}>
+            {data.allMdx.nodes.map(({ excerpt, frontmatter, id, fields, body }) => (
                             <div key={id} className="item">
                                 <Link
                                     to={fields.slug}
                                 >
-                                    <h1>{frontmatter.title}</h1>
+                                    <h2 className="post-title">{frontmatter.title}</h2>
                                 </Link>
-                               
-                                <p>{frontmatter["date"].substring(0, 10)}</p>
-                                <p className="excerpt">{excerpt}</p>
-                                <div>POST COMPONENT</div>
+                                <h6 className="post-date">{frontmatter["date"].substring(0, 10)}</h6>
+                                <MDXRenderer>{body}</MDXRenderer>
                             </div>
                     ))}
         </Layout>

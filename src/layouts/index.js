@@ -3,13 +3,17 @@ import {
     AppBar, Toolbar, IconButton, Typography, Hidden,
     Drawer, CssBaseline, MenuList, MenuItem
 } from '@material-ui/core'
+import '../stylesheets/layoutstyles.css'
 import SubMenu from '../components/submenu'
-import { withStyles } from '@material-ui/core/styles'
+import { responsiveFontSizes, withStyles, createMuiTheme } from '@material-ui/core/styles'
 import { Menu } from '@material-ui/icons'
 import { compose } from 'recompose'
 import { graphql, Link } from "gatsby"
+import { rhythm } from '../utils/typography'
+
 
 const drawerWidth = 240
+
 
 const styles = theme => ({
     root: {
@@ -17,8 +21,10 @@ const styles = theme => ({
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
-        display: 'flex',
+        display: 'flex', 
         width: '100%',
+        padding: rhythm(1),
+        marginBottom: rhythm(1.5),
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
@@ -37,7 +43,7 @@ const styles = theme => ({
     },
     content: {
         flexGrow: 1,
-        backgroundColor: theme.palette.background.default,
+        // backgroundColor: theme.palette.background.default,
         padding: theme.spacing(3),
     },
     nested: {
@@ -88,7 +94,7 @@ class Layout extends Component {
 
         <div className={classes.root}>
             <AppBar position="absolute" className={classes.appBar}>
-            <Toolbar>
+            <Toolbar variant="regular">
                 <IconButton
                 color="inherit"
                 aria-label="open drawer"
@@ -97,17 +103,17 @@ class Layout extends Component {
                 >
                 <Menu />
                 </IconButton>
-                <Typography variant="h6" color="inherit" noWrap>
+                <h6 className="header-tagline" style={{fontFamily: "Source Sans Pro"}}  noWrap> 
                     100 Days Of Code Blog
-                </Typography>
+                </h6>
             </Toolbar>
             </AppBar>
             <Hidden mdUp>
             <Drawer
-                variant="temporary"
+                variant="temporary" 
                 open={mobileOpen}
                 onClose={this.handleDrawerToggle}
-                classes={{
+                classes={{ 
                 paper: classes.drawerPaper,
                 }}
                 ModalProps={{

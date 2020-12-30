@@ -1,0 +1,76 @@
+html {
+    background-color: #F2E9E4;
+
+}
+
+.header-tagline {
+    display: flex;
+    color: white;
+    font-size: 2rem; 
+    margin: 0
+}
+
+.MuiToolbar-regular {
+    background-color: #22223B;
+}
+
+.Layout-content-6 .MuiList-root {
+    background-color: #F2E9E4;
+}
+
+.Layout-toolbar-4 {
+    background-color: #F2E9E4;
+
+}
+
+.Layout-root-1 {
+    background-color: #F2E9E4;
+}
+
+.MuiPaper-root{
+    background-color: #F2E9E4 !important;
+
+}
+
+.MuiMenuItem-root {
+    font-family: 'Source Sans Pro' !important;
+}
+
+.post-date {
+    color: #C9ADA7;
+}
+
+.post-title {
+    color: #9A8C98;
+    /* font-weight: bold; */
+}
+
+.post-excerpt {
+    font-family: 'Source Sans Pro';
+}
+
+.item {
+    color: #9A8C98;
+}
+
+a:hover{
+    text-decoration-color: #4A4E69 !important;
+}
+
+
+.MuiMenuItem-dense {
+    text-decoration-color: #4A4E69 !important;
+    font-family: 'Source Sans Pro' !important;
+}
+
+.MuiList-root > a | li {
+    text-decoration-color: #4A4E69 !important;
+    font-family: 'Source Sans Pro' !important;
+}
+.MuiList-root > li > a {
+    text-decoration-color: #4A4E69 !important;
+    font-family: 'Source Sans Pro' !important;}
+ p{
+    text-decoration-color: #4A4E69 !important;
+    font-family: 'Source Sans Pro' !important;
+ }
