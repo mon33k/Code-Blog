@@ -1,5 +1,5 @@
 html {
-    background-color: #F2E9E4;
+    background-color: #F2E9E4 !important;
 
 }
 
@@ -11,20 +11,20 @@ html {
 }
 
 .MuiToolbar-regular {
-    background-color: #22223B;
+    background-color: #22223B !important;
 }
 
 .Layout-content-6 .MuiList-root {
-    background-color: #F2E9E4;
+    background-color: #F2E9E4 !important;
 }
 
 .Layout-toolbar-4 {
-    background-color: #F2E9E4;
+    background-color: #F2E9E4 !important;
 
 }
 
 .Layout-root-1 {
-    background-color: #F2E9E4;
+    background-color: #F2E9E4 !important;
 }
 
 .MuiPaper-root{
