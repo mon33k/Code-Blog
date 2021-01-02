@@ -6,16 +6,16 @@ module.exports = {
         menuLinks: [
             {
                 name: 'Day 1',
-                link: '/posts/2020/2020-09-01-first-post/'
+                link: '/posts/2020/2020-12-31-first-post/'
             },
-            {
-                name: 'Day 2',
-                link: '/posts/2020/2020-09-05-second-post/'
-            },
-            {
-                name: 'Day 3',
-                link: '/posts/2020/2020-09-10-third-post/'
-            }
+            // {
+            //     name: 'Day 2',
+            //     link: '/posts/2020/2020-09-05-second-post/'
+            // },
+            // {
+            //     name: 'Day 3',
+            //     link: '/posts/2020/2020-09-10-third-post/'
+            // }
         ]
 
     },
@@ -47,14 +47,3 @@ module.exports = {
         `gatsby-plugin-sass`
     ],
 }
-
-
-// {
-//     resolve: `gatsby-plugin-mdx`,
-//     options: {
-//       defaultLayouts: {
-//         posts: require.resolve("./src/templates/blog-post.js"),
-//         default: require.resolve("./src/templates/blog-post.js"),
-//       },
-//     },
-//   },

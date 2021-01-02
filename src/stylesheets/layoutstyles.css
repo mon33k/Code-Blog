@@ -5,6 +5,9 @@ html {
 
 body {
     background-color: #F2E9E4 !important;   
+    font-family: 'Source Sans Pro' !important;
+    text-decoration-color: #4A4E69 !important;
+
 }
 
 .header-tagline {
@@ -40,6 +43,12 @@ body {
     font-family: 'Source Sans Pro' !important;
 }
 
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .post-date {
     color: #C9ADA7;
 }
@@ -47,6 +56,11 @@ body {
 .post-title {
     color: #9A8C98;
     /* font-weight: bold; */
+}
+
+.about-title .about-content {
+    text-decoration-color:  #9A8C98 !important;
+    font-family: 'Source Sans Pro' !important;
 }
 
 .post-excerpt {
@@ -73,8 +87,5 @@ a:hover{
 }
 .MuiList-root > li > a {
     text-decoration-color: #4A4E69 !important;
-    font-family: 'Source Sans Pro' !important;}
- p{
-    text-decoration-color: #4A4E69 !important;
     font-family: 'Source Sans Pro' !important;
- }
+}

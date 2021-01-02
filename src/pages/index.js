@@ -43,12 +43,14 @@ return (
         <Layout location={location}>
             {data.allMdx.nodes.map(({ excerpt, frontmatter, id, fields, body }) => (
                             <div key={id} className="item">
-                                <Link
-                                    to={fields.slug}
-                                >
-                                    <h2 className="post-title">{frontmatter.title}</h2>
-                                </Link>
-                                <h6 className="post-date">{frontmatter["date"].substring(0, 10)}</h6>
+                                <div className="post-header">
+                                    <Link
+                                        to={fields.slug}
+                                    >
+                                        <h2 className="post-title">{frontmatter.title}</h2>
+                                    </Link>
+                                    <h4 className="post-date">{frontmatter["date"].substring(0, 10)}</h4>
+                                </div>
                                 <MDXRenderer>{body}</MDXRenderer>
                             </div>
                     ))}

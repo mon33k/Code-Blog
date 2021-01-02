@@ -1,20 +1,23 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby'
 // import { MDXRenderer } from 'gatsby-plugin-mdx';
+import "../stylesheets/layoutstyles.css"
 import Layout from '../layouts/index'
 
 
 export default ({children, pageContext}) => {
-    console.log("dataaa ", children)
-    console.log("frontmatter ", pageContext)
 
-    return (
-        <Layout>
-            <h2 className="post-title">{pageContext.frontmatter.title}</h2>
-            <h6 className="post-date">{pageContext.frontmatter.date.substring(0, 10)}</h6>
-            {children}
-        </Layout>
-    )
+        return (
+            <Layout>
+                <div className="post-header">
+                    <h2 className="post-title">{pageContext.frontmatter.title}</h2>
+                    <h4 className="post-date">{pageContext.frontmatter.date.substring(0, 10)}</h4>
+                </div>
+                {children}
+            </Layout>
+        )
+    
+
 }
 
 
