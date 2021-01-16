@@ -15,7 +15,12 @@ module.exports = {
             {
                 name: 'Day 3',
                 link: '/posts/2021/2021-01-14-third-post/'
-            }
+            },
+            {
+                name: 'Day 4',
+                link: '/posts/2021/2021-01-15-fourth-post/'
+            },
+
         ]
 
     },
@@ -58,6 +63,10 @@ module.exports = {
                     showCaptions: true
                   }
                 },
+                {
+                    resolve: `gatsby-remark-prismjs`,
+                    options: {},
+                }
               ]
             }
           },
