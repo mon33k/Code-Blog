@@ -2,7 +2,7 @@
 
 module.exports = {
     siteMetadata: {
-        title: "100 Days Of Code - First Round",
+        title: "Monique's Code Blog",
         menuLinks: [
             {
                 name: 'Day 1',
@@ -25,7 +25,7 @@ module.exports = {
 
     },
     
-    pathPrefix: "/Hundred-Days-Of-Code-Log",
+    pathPrefix: "/Code-Blog",
     plugins: [
         {
             resolve: `gatsby-plugin-mdx`,

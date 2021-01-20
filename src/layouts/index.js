@@ -65,8 +65,6 @@ class Layout extends Component {
         
         const { mobileOpen } = this.state
 
-        // console.log("data in layout compoent ", data)
-
         const drawer = (
         <div>
             <Hidden smDown>
@@ -104,7 +102,7 @@ class Layout extends Component {
                 <Menu />
                 </IconButton>
                 <h6 className="header-tagline" style={{fontFamily: "Source Sans Pro"}}  noWrap> 
-                    100 Days Of Code Blog
+                    My Code Journey
                 </h6>
             </Toolbar>
             </AppBar>
