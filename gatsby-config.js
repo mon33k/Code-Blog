@@ -5,21 +5,21 @@ module.exports = {
         title: "Monique's Code Blog",
         menuLinks: [
             {
-                name: 'Day 1',
+                name: 'First Post',
                 link: '/posts/2021/2021-01-12-first-post/'
             },
             {
-                name: 'Day 2',
+                name: 'Pomodoro App',
                 link: '/posts/2021/2021-01-13-second-post/'
             },
             {
-                name: 'Day 3',
+                name: 'Adding Syntax Highlight',
                 link: '/posts/2021/2021-01-14-third-post/'
             },
-            {
-                name: 'Day 4',
-                link: '/posts/2021/2021-01-15-fourth-post/'
-            },
+            // {
+            //     name: 'Day 4',
+            //     link: '/posts/2021/2021-01-15-fourth-post/'
+            // },
 
         ]
 
